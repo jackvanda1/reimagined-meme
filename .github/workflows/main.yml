@@ -17,5 +17,10 @@ jobs:
         with:
           php-version: '8.2'
 
-      - name: Run meme_libs.php
-        run: php meme_libs.php
+      - name: Run meme_libs.php 10 times
+        run: |
+          for i in {1..10}
+          do
+            echo "Run #$i"
+            php meme_libs.php
+          done
